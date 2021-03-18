@@ -14,16 +14,23 @@ public class PokerBrandComparator implements BrandComparator<PokerBrand, OutBran
 
     @Override
     public boolean comparator(List<PokerBrand> next, List<PokerBrand> now, OutBrandType type) {
-        return switch (type) {
-            case SINGLE -> singleComparator(next, now);
-            case DOUBLE -> doubleComparator(next, now);
-            case THREE_BELTS -> threeBeltsComparator(next, now);
-            case EVEN -> evenComparator(next, now);
-            case BOMB -> bombComparator(next, now);
-            case COUPLE -> coupleComparator(next, now);
-            case AIRCRAFT -> aircraftComparator(next, now);
-            default -> false;
-        };
+        switch (type) {
+            case SINGLE:
+                return singleComparator(next, now);
+            case DOUBLE :
+                return doubleComparator(next, now);
+            case EVEN :
+                return evenComparator(next, now);
+            case THREE_BELTS :
+                return threeBeltsComparator(next, now);
+            case BOMB :
+                return bombComparator(next, now);
+            case COUPLE:
+                return coupleComparator(next, now);
+            case AIRCRAFT:
+                return aircraftComparator(next, now);
+        }
+        return false;
     }
 
     /**
