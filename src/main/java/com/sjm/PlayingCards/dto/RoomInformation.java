@@ -11,7 +11,7 @@ import java.util.UUID;
  * 房间信息
  */
 public class RoomInformation {
-    //游玩房间
+    //游玩房间 
     private final PokerRoom pokerRoom;
     //房间id
     private final String id;
