@@ -21,7 +21,7 @@ public class LoginController {
     }
 
     /**
-     * 游客登录
+     * 游客登录测试dev
      * @return CommonResult
      */
     @PostMapping("/tourist")
